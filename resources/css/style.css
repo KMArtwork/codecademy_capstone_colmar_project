@@ -4,9 +4,26 @@
     margin: 0; 
     padding: 0;
     color:rgb(75, 75, 75);
+    box-sizing: border-box;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .desktop {
+        display:none;
+    }
+
+    .mobile {
+        display:block;
+    }
 }
 
 /* Header Nav Bar + Welcome Banner Styling */
+
+
 
 header nav {
     display: flex;
@@ -30,7 +47,7 @@ header nav #logo-container strong {
     font-size: 2rem;
 }
 
-header a {
+header nav a {
     text-decoration: none;
     padding: 0 0.25rem; 
 }
@@ -43,7 +60,7 @@ header .welcome {
 }
 
 .welcome h4 {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 }
 
 #welcome-text {
@@ -61,6 +78,16 @@ header .welcome {
     padding: 0.5rem;
 }
 
+.welcome button {
+    display: block;
+    width: 100%;
+    background-color: rgb(75, 75, 75);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
 header .welcome img {
     max-width: 60%;
 }
@@ -70,10 +97,50 @@ header #welcome-text {
     justify-self: center;
 }
 
+header .mobile {
+    display:flex;
+    justify-content: space-evenly;
+    align-content: center;
+    height: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        padding: 0;
+    }
+
+    header .mobile img {
+        height: 2rem;
+    }
+
+    header .welcome {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header .welcome #welcome-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    header .welcome img {
+        max-width: 100%;
+    }
+
+    header button {
+        margin: 1rem 0;
+    }
+
+    header .welcome #welcome-text {
+        padding: 1rem;
+    }
+}
+
 
 /* Information Styling */
 
-main #information-container {
+#information-container {
     display: flex;
     padding: 2rem 1.5rem;
 }
@@ -111,10 +178,6 @@ main .event-box {
     align-items: center;
 }
 
-main .blurb {
-    max-width: 65%;
-}
-
 main .blurb p {
     padding: 0.5rem 0;
 }
@@ -149,9 +212,43 @@ main #event3 {
     font-size: 0.75rem;
 }
 
+@media only screen and (max-width: 600px) {
+
+    #information-container {
+        padding: 1rem;
+    }
+
+    main #events {
+        padding: 0;
+    }
+
+    main #events .blurb {
+        padding: 1rem;
+    }
+
+    main .event-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    main #events img {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    main #events #event3 {
+        background-color: white;
+    }
+
+}
+
 /* Courses Styling */
 
 #learn {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
     background-color: lightgray;
     padding: 2rem 4.5rem;                                              
 }
@@ -165,11 +262,32 @@ main #event3 {
 #courses-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
+    /*margin: 0 18.5rem;*/
 }
+
+/*trying to maintain the 3x3 format at various screen sizes, probably a better way to do this*/
+@media only screen and (min-width: 1366px) {
+    #courses-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 9rem;
+    }
+  }
+
+@media only screen and (min-width: 1920px) {
+    #courses-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 18.5rem;
+    }
+  }
 
 .course {
     width: 18rem;
+    max-width: 20rem;
     background-color: white;
     margin: 0.5rem;
 }
@@ -186,6 +304,31 @@ main #event3 {
 
 .course p {
     font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 600px) {
+    #learn {
+        background-color: white;
+        padding: 1rem;
+        border-top: 1px solid lightgray;
+    }
+
+    .course {
+        background-color: lightgray;
+        width: 100%;
+        margin: 0.25rem 0;
+        padding: 1rem;
+    }
+
+    #courses-container {
+        padding: 0;
+    }
+
+    #learn-header {
+        padding: 1rem;
+    }
+
+
 }
 
 /* Thesis Styling */
@@ -245,6 +388,31 @@ main #event3 {
     font-size: 0.75rem;
 }
 
+@media only screen and (max-width: 600px) {
+    #thesis-list {
+        display: none;
+    }
+
+    #thesis {
+        padding: 1rem 0;
+        border-top: 1px solid lightgray;
+    }
+
+    #thesis-main {
+        max-width:100%;
+        margin:0;
+    }
+
+    #thesis video {
+        margin: 0;
+    }
+
+    #thesis-container {
+        padding: 1rem 0; 
+
+    }
+}
+
 /* Footer Styling */
 
 footer {
@@ -258,4 +426,8 @@ footer {
 
 footer a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+
 }

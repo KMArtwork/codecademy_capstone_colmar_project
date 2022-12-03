@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"/>
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet"/> 
@@ -8,13 +9,10 @@
         <!--for responsive design scaling-->
         <title>Colar Academy</title>
     </head>
-        
-    
 
     <body>
-
         <header>
-            <nav>
+            <nav class="desktop">
                 <div id="logo-container">
                     <img class="logo" src="./resources/images/ic-logo.svg" alt="The Colmar Academy logo, a lion standing on its hind legs"/>
                     <p><strong>COLMAR</strong>ACADEMY</p>
@@ -26,25 +24,26 @@
                     <a href="#">Sign In</a>
                 </div>
             </nav>
+            <nav class="mobile">
+                <img class="logo" src="./resources/images/ic-logo.svg" alt="The Colmar Academy logo, a lion standing on its hind legs"/>
+                <img class="oncampus" src="./resources/images/ic-on-campus.svg" alt="Desk icon"/>
+                <img class="online" src="./resources/images/ic-online.svg" alt="Desktop monitor icon"/>
+                <img class="login" src="./resources/images/ic-login.svg" alt="Person Icon"/>
+            </nav>
     
             <div class="welcome">
-                <!--<div class="banner image">-->
                     <img src="./resources/images/banner.jpg" alt="3 people sitting at a table, two are reading and one is writing"/>
-                <!--</div>-->
                 <div id="welcome-text">
                     <h1>Learn Something New Everyday</h1>
                     <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                    <div id="welcome-button">
-                        <p>Start Here</p>
-                    </div>
-                </div> <!--end of welcome-text -->
+                    <a href="#"><button type="button" class="block">Start Here</button></a>
+                </div>
             </div>
         </header>
 
         <main>
-
             <div id="information-container">
-                <div id="information">
+                <div id="information" class="desktop">
                     <img src="./resources/images/information-main.jpg" alt="A man sitting in the park, smiling and reading a book"/>
                     <h3>It Doesn't Hurt to Keep Practicing</h3>
                     <p class="quote">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
@@ -52,7 +51,8 @@
                 </div>        
                 <div id="events">
                     <div class="event-box" id="event1">
-                        <img src="./resources/images/information-orientation.jpg" alt="An aerial view of people walking on a stone path during the fall"/>
+                        <img class="desktop" src="./resources/images/information-orientation.jpg" alt="An aerial view of people walking on a stone path during the fall"/>
+                        <img class="mobile" src="./resources/images/information-orientation-mobile.jpg" alt="An aerial view of people walking on a stone path during the fall"/>
                         <div class="blurb">
                             <h4>Orientation Date</h4>
                             <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
@@ -60,7 +60,8 @@
                         </div>
                     </div>
                     <div class="event-box" id="event2">
-                        <img src="./resources/images/information-campus.jpg" alt="People sitting at a table inside a room studying and reading, with hanging lights, wooden walls, and a map of South America on the wall"/>
+                        <img class="desktop" src="./resources/images/information-campus.jpg" alt="People sitting at a table inside a room studying and reading, with hanging lights, wooden walls, and a map of South America on the wall"/>
+                        <img class="mobile" src="./resources/images/information-campus-mobile.jpg" alt="People sitting at a table inside a room studying and reading, with hanging lights, wooden walls, and a map of South America on the wall"/>
                         <div class="blurb">
                             <h4>Our Campus</h4>
                             <p>Find which campus is close by you</p>
@@ -68,7 +69,8 @@
                         </div>
                     </div>
                     <div class="event-box" id="event3">
-                        <img src="./resources/images/information-guest-lecture.jpg" alt="A close up photo of Oliver Sack, a man with a grey beard, small bushy black eyebrows, wearing a beret and round tortoise shell glasses"/>
+                        <img class="desktop" src="./resources/images/information-guest-lecture.jpg" alt="A close up photo of Oliver Sack, a man with a grey beard, small bushy black eyebrows, wearing a beret and round tortoise shell glasses"/>
+                        <img class="mobile" src="./resources/images/information-guest-lecture-mobile.jpg" alt="A close up photo of Oliver Sack, a man with a grey beard, small bushy black eyebrows, wearing a beret and round tortoise shell glasses"/>
                         <div class="blurb">
                             <h4>Our Guest Lecture</h4>
                             <p>Join a keynote with Oliver Sack about music in medical treatment</p>
@@ -82,8 +84,8 @@
                 <div id="learn-header">
                     <h2>Start Learning</h2>
                 </div>
-                <div id="courses-container">
-                    <div class="course" id="course1">
+                <div id="courses-container" >
+                    <div class="course desktop">
                         <img src="./resources/images/course-software.jpg" alt="Mac computers on a desk with a lamp">
                         <div class="blurb">
                             <h4>Software Engineering</h4>
@@ -91,7 +93,7 @@
                             <p>Web Development, Mobile Development, iOT, APIs</p>
                         </div>
                     </div>
-                    <div class="course" id="course2">
+                    <div class="course desktop">
                         <img src="./resources/images/course-computer-art.jpg" alt="A hand holding a cell phone at a wooden table with a coffee cup">
                         <div class="blurb">
                             <h4>Computer Art</h4>
@@ -99,7 +101,7 @@
                             <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
                         </div> 
                     </div>
-                    <div class="course" id="course3">
+                    <div class="course desktop">
                         <img src="./resources/images/course-design.jpg" alt="Person holding a vintage camera pointing off into the distance">
                         <div class="blurb">
                             <h4>Design</h4>
@@ -107,7 +109,7 @@
                             <p>User Experience Design, User Research, Visual Design</p>
                     </div>
                     </div>
-                    <div class="course" id="course4">
+                    <div class="course desktop">
                         <img src="./resources/images/course-data.jpg" alt="Close up of a laptop sitting on a glass table in an home office">
                         <div class="blurb">
                             <h4>Data</h4>
@@ -115,7 +117,7 @@
                             <p>Data Science, Big Data, SQL, Data Visualization</p>
                         </div>
                     </div>
-                    <div class="course" id="course5">
+                    <div class="course desktop">
                         <img src="./resources/images/course-business.jpg" alt="Close up of stylized wooden chess pieces with a red leather chesterfield couch blurred in the background">
                         <div class="blurb">
                             <h4>Business</h4>
@@ -123,13 +125,31 @@
                             <p>Product Development, Business Development, Startup</p>
                         </div>
                     </div>
-                    <div class="course" id="course6">
+                    <div class="course desktop">
                         <img src="./resources/images/course-marketing.jpg" alt="Close up shot of the hands of a person interacting with their apple smart watch">
                         <div class="blurb">
                             <h4>Marketing</h4>
                             <p>COURSES</p>
                             <p>Analytics, Content Marketing, Mobile Marketing</p>
                         </div>
+                    </div>
+                    <div class="course mobile">
+                        <h4>Software Engineering</h4>
+                    </div>
+                    <div class="course mobile">
+                        <h4>Computer Art</h4>
+                    </div>
+                    <div class="course mobile">
+                        <h4>Designg</h4>
+                    </div>
+                    <div class="course mobile">
+                        <h4>Data</h4>
+                    </div>
+                    <div class="course mobile">
+                        <h4>Business</h4>
+                    </div>
+                    <div class="course mobile">
+                        <h4>Marketing</h4>
                     </div>
                 </div> <!--end of courses-container-->
             </div> <!--end of learn div-->
@@ -143,10 +163,12 @@
                         <video controls autoplay>
                             <source src="./resources/videos/thesis.mp4" type="video/webm">
                         </video>
-                        <h3>Reimagine Urban</h3>
-                        <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+                        <div class="blurb desktop">
+                            <h3>Reimagine Urban</h3>
+                            <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+                        </div>
                     </div>
-                    <div id="thesis-list">
+                    <div id="thesis-list" class="desktop">
                         <div class="thesis-box" id="thesis1">
                             <img src="./resources/images/thesis-fisma.jpg" alt="top down view of an arm making notes on paper with an iphone on top"/>
                             <div class="blurb">
@@ -171,7 +193,7 @@
             <div id="copyright">
                 <p>© 2016 Colmar Academy. All rights reserved</p>
             </div>
-            <div id="legal">
+            <div id="legal" class="desktop">
                 <a href="#">Terms</a>
                 <a href="#">Privacy</a>
             </div>
